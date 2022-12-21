@@ -6,7 +6,7 @@ def fibo(treshold):
     following = 1
     lst = [precending, following]
 
-    while precending + following <= treshold:
+    for i in range(treshold-1):
         next_element = precending + following
         precending, following = following, next_element
         lst.append(next_element)
@@ -21,7 +21,7 @@ def nega_fibo(fibo_lst):
     return fibo_lst[::-1]
 
 
-limit = randint(3, 100)
+limit = randint(3, 15)
 fibo_direct = fibo(limit)
 fibo_reverse = nega_fibo(fibo_direct)
 
