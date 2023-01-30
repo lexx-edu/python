@@ -16,7 +16,7 @@ async def stop_game(message: types.Message):
     await message.answer(msg)
 
 
-@dp.message_handler(commands=['help'])
+@dp.message_handler(commands=['start', 'help'])
 async def help_msg(message: types.Message):
     msg = game.help_message()
     await message.answer(msg)
